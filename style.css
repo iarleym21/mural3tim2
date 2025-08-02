@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.due-past {
+    color: #a00; /* dark red */
+    font-weight: bold;
+}
+
+.due-soon {
+    color: #d9534f; /* bootstrap danger red */
+    font-weight: bold;
+}
+
+.due-medium {       
+    color: #d58512; /* darker orange for better visibility */
+}
+
+.due-late {
+    color: #28a745; /* more vivid green */
+}
+
+body {
+    background: #f7ebe8;
+    color: #333;
+}
+
+header {
+    background-color: #5fb6c9;
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+header img {
+    height: 70px;
+    width: auto;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.header-nav ul li a {
+    color: #2f2f2f;
+    background-color: #ffd166;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+}
+
+.header-nav ul li a:hover {
+    background-color: #26738c;
+    color: #f7f7f7;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.card-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #fff3f0;
+    border-radius: 10px;
+    line-height: 1.5;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #004080;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    margin-left: 20px;
+}
+
+.horario {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.aulas h3 {
+    color: #004080;
+}
+
+.aulas {
+    gap: 2rem;
+    background-color: #fff3f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    padding: 1rem 2.5rem;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.aulas ol li {
+    list-style: none;
+}
+h2 {
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    color: #033c76;
+    margin: 50px;
+    font-size: 2rem;
+}
+
+.prova-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.prova_card {
+    background: #fff3f0;
+    border-radius: 10px;
+    display: flex;
+    line-height: 1.5;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.prova_card h3 {
+    color: #004080;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.prova_card ul {
+    margin-left: 20px;
+}
+
+.youtube-button img {
+    width: 40px; /* tamanho da logo */
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.youtube-button:hover img {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .header-nav ul {
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .header-nav ul li {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .header-nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+}
