@@ -8,6 +8,7 @@
 .due-past {
     color: #a00; /* dark red */
     font-weight: bold;
+    text-decoration: line-through;
 }
 
 .due-soon {
