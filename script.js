@@ -39,3 +39,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+// Botão para alternar tema claro/escuro
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleButton = document.getElementById('botao-tema');
+    const body = document.body;
+
+    const applySavedTheme = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+        } else {
+            body.classList.remove('dark-theme');
+        }
+    };
+
+    const toggleTheme = () => {
+        body.classList.toggle('dark-theme');
+        if (body.classList.contains('dark-theme')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    };
+
+    themeToggleButton.addEventListener('click', toggleTheme);
+
+    applySavedTheme();
+});
