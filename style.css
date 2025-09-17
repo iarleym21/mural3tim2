@@ -6,12 +6,19 @@
   font-family: Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 :root {
   --primary-color: #2c3e50;
   --accent-color: #1abc9c;
   --background-color: #f4f6f6;
   --card-background: #ffffff;
   --text-color: #354d65;
+=======
+.due-past {
+    color: #a00; /* dark red */
+    font-weight: bold;
+    text-decoration: line-through;
+>>>>>>> 6bd9ee089c7718b1eb9d122e2177b4e2a90eebf6
 }
 
 body,
