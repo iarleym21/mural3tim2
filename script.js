@@ -68,3 +68,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     applySavedTheme();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleButton = document.getElementById('theme-toggle-button');
+    const body = document.body;
+
+    const applySavedTheme = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+        } else {
+            body.classList.remove('dark-theme');
+        }
+    };
+
+    const toggleTheme = () => {
+        body.classList.toggle('dark-theme');
+
+        // Salva a preferência de tema
+        if (body.classList.contains('dark-theme')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+
+        // ADICIONE ESTA LINHA: Força o botão a perder o foco
+        themeToggleButton.blur();
+    };
+
+    themeToggleButton.addEventListener('click', toggleTheme);
+
+    applySavedTheme();
+});
+
+document.querySelectorAll("#botao-tema, .header-nav ul li a").forEach((el) => {
+  el.addEventListener("touchstart", () => {
+    el.classList.add("tocado")
+  })
+  el.addEventListener("touchend", () => {
+    setTimeout(() => el.classList.remove("tocado"), 1500) // 150ms
+  })
+})

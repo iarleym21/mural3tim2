@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -26,6 +25,8 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: var(--background-color);
   color: var(--text-color);
+    box-sizing: border-box;
+
 }
 
 .title {
@@ -53,12 +54,13 @@ header img {
 .header-nav ul {
   display: flex;
   list-style: none;
+  align-items: center;
   gap: 20px;
 }
 
-.header-nav ul li * {
-  color: white;
-  display: inline-block;
+.header-nav ul li a, #botao-tema {
+  color: var(--accent-color);
+  display: inline;
   background-color: transparent;
   border: 2px solid var(--accent-color);
   border-radius: 5px;
@@ -66,15 +68,12 @@ header img {
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
-#botao-tema:hover {
-  background-color: #17a589;
-}
-
-.header-nav ul li a:hover {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
+.tocado {
+  background-color: #17a589 !important;
+  color: var(--text-color) !important;
 }
 
 .card-container {
@@ -193,26 +192,35 @@ header img {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 20px;
-  }
-
   .header-nav ul {
-    flex-direction: column;
-    align-items: center;
     gap: 10px;
-    width: 100%;
   }
 
-  .header-nav ul li {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .header-nav ul li a {
-    display: block;
+  .header-nav ul li a, #botao-tema {
     text-align: center;
+    text-wrap: nowrap;
+    padding: 0.6rem 0.8rem;
+    font-size: .9\rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #botao-tema:hover {
+    background-color: #17a589;
+  }
+
+  .header-nav ul li a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+
+  .youtube-button:hover img {
+    transform: scale(1.1);
+  }
+
+  body.dark-theme .header-nav ul li *:hover {
+  background-color: var(--accent-color);
+  color: #1a202c;
   }
 }
 
@@ -238,13 +246,8 @@ body.dark-theme .prova_card {
 }
 
 body.dark-theme .header-nav ul li * {
-  border-color: v * r(--accent-color);
+  border-color: var(--accent-color);
   color: var(--accent-color);
-}
-
-body.dark-theme .header-nav ul li *:hover {
-  background-color: var(--accent-color);
-  color: #1a202c;
 }
 
 body.dark-theme .due-past {
