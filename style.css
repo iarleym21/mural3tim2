@@ -215,9 +215,9 @@ header img {
     background-color: #17a589;
   }
 
-  .header-nav ul li a:hover {
+  .header-nav ul li a:hover, #botao-tema:hover {
     background-color: var(--accent-color);
-    color: var(--primary-color);
+    color: #1a202c
   }
 
   .youtube-button:hover img {
