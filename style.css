@@ -137,6 +137,7 @@ header img {
   border: 2px solid #c8c9ca6f;
   padding: 20px;
   border-radius: 10px;
+  max-width: 60vw;
   text-align: center;
 }
 
@@ -151,10 +152,24 @@ header img {
   padding: 0 1rem;
   font-size: 1.15rem;
   line-height: 2.5;
+  display: flex;
+  flex-direction: column;
+  display: block;
+  gap: 15px;
+  align-items: center;
+}
+
+.aulas ol li {
+  background-color: var(--card-background);
+  box-shadow: 4px 15px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid #c8c9ca6f;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .avaliacoes {
-  max-width: 900px;
   margin: auto;
   padding: 0 20px;
   font-size: 1.15rem;
@@ -168,7 +183,7 @@ header img {
   justify-content: space-between;
   align-items: center;
   border: 1px solid #eaecee;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
   margin-bottom: 20px;
 }
@@ -206,7 +221,11 @@ header img {
     text-align: center;
     text-wrap: nowrap;
     padding: 0.6rem 0.8rem;
-    font-size: .9rem;
+    font-size: 0.9rem;
+  }
+
+  .aulas {
+    flex: 1;
   }
 }
 
@@ -215,9 +234,10 @@ header img {
     background-color: #17a589;
   }
 
-  .header-nav ul li a:hover, #botao-tema:hover {
+  .header-nav ul li a:hover,
+  #botao-tema:hover {
     background-color: var(--accent-color);
-    color: #1a202c
+    color: #1a202c;
   }
 
   .youtube-button:hover img {
